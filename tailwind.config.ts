@@ -8,6 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "custom-gradient": `linear-gradient(147.75deg, 
+        #2B3391 -46.16%, 
+        #353B95 -3.75%, 
+        #514FA0 67.67%, 
+        #7E6FB2 159.17%, 
+        #8776B6 177.02%)`,
+        "page2-bg": "url('../app/assets/page2-bg.png')",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
