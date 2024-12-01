@@ -10,7 +10,7 @@ interface CardProps {
 
 function Card({ CardIcon, CardHeading, CardContent }: CardProps) {
   return (
-    <div className="group relative flex flex-col justify-start items-start w-60 min-h-fit py-2 pb-6 shadow-2xl text-black bg-white px-5 rounded-3xl overflow-hidden transition-transform duration-500 ease-in-out group-hover:bg-custom-gradient group-hover:text-white transform-cpu hover:rotate-[-3deg]">
+    <div className="group relative flex flex-col justify-start items-start w-60 min-h-fit py-2 pb-6 shadow-sm text-black bg-white px-5 rounded-3xl overflow-hidden transition-transform duration-500 ease-in-out group-hover:bg-custom-gradient group-hover:text-white transform-cpu hover:rotate-[-3deg]">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-custom-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
