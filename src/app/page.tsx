@@ -13,7 +13,7 @@ export default function Home() {
       <Page2 />
       <Page3 />
       <Page4 />
-      <Page3 />
+      <div className="h-screen w-full bg-black z-20"></div>
     </div>
   );
 }

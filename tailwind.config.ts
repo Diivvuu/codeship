@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        "custom-shadow": "-3px 2px 16.4px 0px #0000001A",
+      },
       backgroundImage: {
         "custom-gradient": `linear-gradient(147.75deg, 
         #2B3391 -46.16%, 

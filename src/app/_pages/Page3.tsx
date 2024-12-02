@@ -4,7 +4,7 @@ import Card from "../_components/Card";
 
 function Page3() {
   return (
-    <div className="h-screen w-full flex justify-between items-start px-20 pt-20">
+    <div className="h-screen w-full flex justify-between items-start px-28 pt-20">
       <div className="w-full">
         <h2 className="font-semibold leading-8 text-4xl mb-4 w-6/12">
           Some of the things we can do for you

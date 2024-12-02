@@ -26,5 +26,5 @@ export const cardData = [
     heading: "Project Management",
     content:
       "Seamlessly execute your software development project with the help of our experienced project managers. We tailor fit the methodology to your needs.",
-  },
+    },
 ];
