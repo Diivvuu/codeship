@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BigCard from "../_components/BigCard";
@@ -9,16 +9,18 @@ import { ArrowRight } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 const Page4 = () => {
+  const [cardViewStates, setCardViewStates] = useState(
+    Array(cardData.length).fill(false)
+  );
+
   const containerRef = useRef(null);
-  const box1Ref = useRef(null);
-  const box2Ref = useRef(null);
-  const box3Ref = useRef(null);
-  const box4Ref = useRef(null);
+  const boxRefs = useRef([]); // Dynamic refs for each panel
 
   useEffect(() => {
-    let sections = gsap.utils.toArray(".panel");
+    const sections = gsap.utils.toArray(".panel");
 
-    let scrollTween = gsap.to(sections, {
+    // Horizontal Scroll
+    const scrollTween = gsap.to(sections, {
       xPercent: -100 * (sections.length - 1),
       ease: "none",
       scrollTrigger: {
@@ -26,62 +28,30 @@ const Page4 = () => {
         pin: true,
         scrub: 0.1,
         end: () =>
-          `+=${
-            containerRef.current.offsetWidth -
-            window.innerWidth -
-            window.innerWidth * 0.5
-          }`,
+          `+=${containerRef.current.scrollWidth - window.innerWidth * 6}`,
       },
     });
 
-    // Individual animations
-    gsap.to(box1Ref.current, {
-      // y: -130,
-      duration: 2,
-      ease: "elastic",
-      scrollTrigger: {
-        trigger: box1Ref.current,
-        containerAnimation: scrollTween,
-        start: "top top",
-        toggleActions: "play none none reset",
-      },
-    });
-
-    gsap.to(box2Ref.current, {
-      // y: -120,
-      // backgroundColor: "#1e90ff",
-      ease: "none",
-      scrollTrigger: {
-        trigger: box2Ref.current,
-        containerAnimation: scrollTween,
-        start: "center 80%",
-        end: "center 20%",
-        scrub: true,
-      },
-    });
-
-    gsap.to(box3Ref.current, {
-      // y: -100,
-      duration: 1.5,
-      ease: "power2",
-      scrollTrigger: {
-        trigger: box3Ref.current,
-        containerAnimation: scrollTween,
-        start: "center 75%",
-        scrub: true,
-      },
-    });
-
-    gsap.to(box4Ref.current, {
-      // opacity: 0.8,
-      // scale: 1.1,
-      ease: "power1",
-      scrollTrigger: {
-        trigger: box4Ref.current,
-        containerAnimation: scrollTween,
-        start: "center 70%",
-        scrub: true,
-      },
+    // Animations for each section
+    boxRefs.current.forEach((box, index) => {
+      if (box) {
+        gsap.to(box, {
+          opacity: 1, // Example animation
+          scale: 1,
+          ease: "power1",
+          scrollTrigger: {
+            trigger: box,
+            containerAnimation: scrollTween,
+            start: "center 75%",
+            scrub: true,
+            onEnter: () => {
+              setCardViewStates((prev) =>
+                prev.map((view, i) => (i === index ? true : view))
+              );
+            },
+          },
+        });
+      }
     });
 
     return () => {
@@ -90,11 +60,11 @@ const Page4 = () => {
   }, []);
 
   return (
-    <div className="relative flex-col h-[525vh] w-[400vw] overflow-y-hidden">
+    <div className="relative flex-col justify-start h-[450vh] w-[800vw] overflow-y-hidden">
       <div ref={containerRef} className="flex h-screen w-full">
-        <section className="panel h-full w-[100vw]" ref={box1Ref}>
+        <section className="panel h-full w-[50vw]">
           <div className="flex w-full h-full items-center justify-center px-28">
-            <div className="w-1/2 h-full flex flex-col justify-center items-start gap-y-2">
+            <div className="h-full flex flex-col justify-center items-start gap-y-2">
               <p className="text-xs">How can we help you</p>
               <h2 className="text-5xl font-semibold text-wrap w-5/12">
                 Services We Offer
@@ -112,65 +82,24 @@ const Page4 = () => {
                 </span>
               </div>
             </div>
-            <div className="w-1/2">
-              <BigCard
-                icon={cardData[0].imageUrl}
-                heading={cardData[0].heading}
-                content={cardData[0].content}
-              />
-            </div>
           </div>
         </section>
-
-        <section className="panel  w-[100vw]" ref={box2Ref}>
-          <div className="flex w-full h-full items-center justify-center">
-            <div className="w-1/2">
+        {cardData.map((card, index) => (
+          <section
+            key={index}
+            className="panel w-[50vw]"
+            ref={(el) => (boxRefs.current[index] = el)}
+          >
+            <div className="flex w-full h-full items-center justify-center">
               <BigCard
-                icon={cardData[1].imageUrl}
-                heading={cardData[1].heading}
-                content={cardData[1].content}
+                icon={card.imageUrl}
+                heading={card.heading}
+                content={card.content}
+                cardView={cardViewStates[index]}
               />
             </div>
-            <div className="w-1/2">
-              <BigCard
-                icon={cardData[2].imageUrl}
-                heading={cardData[2].heading}
-                content={cardData[2].content}
-              />
-            </div>
-          </div>
-        </section>
-
-        <section className="panel  w-[100vw]" ref={box3Ref}>
-          <div className="flex w-full h-full items-center justify-center">
-            <div className="w-1/2">
-              <BigCard
-                icon={cardData[3].imageUrl}
-                heading={cardData[3].heading}
-                content={cardData[3].content}
-              />
-            </div>
-            <div className="w-1/2">
-              <BigCard
-                icon={cardData[4].imageUrl}
-                heading={cardData[4].heading}
-                content={cardData[4].content}
-              />
-            </div>
-          </div>
-        </section>
-
-        <section className="panel w-[100vw]" ref={box4Ref}>
-          <div className="flex w-full h-full items-center justify-start">
-            <div className="w-1/2">
-              <BigCard
-                icon={cardData[5].imageUrl}
-                heading={cardData[5].heading}
-                content={cardData[5].content}
-              />
-            </div>
-          </div>
-        </section>
+          </section>
+        ))}
       </div>
     </div>
   );
