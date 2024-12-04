@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ChevronRight } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,13 +42,18 @@ const BigCard: React.FC<BigCardProps> = ({
   }, [cardView, heading]);
 
   return (
-    <div className="w-full min-h-96 max-w-[36rem] rounded-xl shadow-custom-shadow flex px-9 py-8 flex-col items-start justify-center gap-y-3">
+    <div className="w-full min-h-80 max-w-[36rem] rounded-xl shadow-custom-shadow flex px-9 py-8 flex-col items-start justify-center gap-y-3">
       <div ref={iconRef} className="relative w-full">
         <Image width={50} height={60} src={icon} alt="icon" />
       </div>
       <div className="text-2xl font-semibold">{heading}</div>
       <div className="text-wrap text-[#737373]">{content}</div>
-      <p className="text-[#504CA0]">Read More</p>
+      <p className="flex items-center font-semibold text-[#504CA0]">
+        Read More
+        <span className="mt-0.5">
+          <ChevronRight className="size-3.5" style={{ strokeWidth: "3" }} />
+        </span>
+      </p>
     </div>
   );
 };

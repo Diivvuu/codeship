@@ -60,7 +60,7 @@ const Page4 = () => {
   }, []);
 
   return (
-    <div className="relative flex-col justify-start h-[450vh] w-[800vw] overflow-y-hidden">
+    <div className="relative flex-col justify-start h-[500vh] w-[800vw] overflow-y-hidden">
       <div ref={containerRef} className="flex h-screen w-full">
         <section className="panel h-full w-[50vw]">
           <div className="flex w-full h-full items-center justify-center px-28">

@@ -5,6 +5,7 @@ import Page1 from "./_pages/Page1";
 import Page2 from "./_pages/Page2";
 import Page3 from "./_pages/Page3";
 import Page4 from "./_pages/Page4";
+import Page5 from "./_pages/Page5";
 
 export default function Home() {
   return (
@@ -14,10 +15,8 @@ export default function Home() {
       <Page2 />
       <Page3 />
       <Page4 />
-      <div
-        style={{ zIndex: "9999" }}
-        className="h-screen w-full bg-black z-20"
-      ></div>
+      <Page5 />
+      <div className="bg-black min-h-screen w-full"></div>
     </div>
   );
 }

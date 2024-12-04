@@ -24,6 +24,15 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        active: {
+          "0%": { transform: "scale(1)" },
+          "100%": { transform: "scale(1.05)" },
+        },
+      },
+      animation: {
+        active: "active 0.3s ease-in-out",
+      },
     },
   },
   plugins: [],
