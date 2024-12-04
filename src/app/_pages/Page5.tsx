@@ -7,6 +7,7 @@ import Image from "next/image";
 import icon1 from "@/app/assets/page5icon1.png";
 import icon2 from "@/app/assets/page5icon2.png";
 import icon3 from "@/app/assets/page5icon3.png";
+import img from "@/app/assets/page5image1.png";
 
 const Page5: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -19,15 +20,15 @@ const Page5: React.FC = () => {
 
     // Create a ScrollTrigger for each section with adjusted scroll ranges for 300vh
     sections.forEach((section, index) => {
-      const startScroll = `${index * 1000}vh`; // Adjust for total screen height (100vh per section)
-      const endScroll = `${index * 1200}vh`; // Adjust for total screen height (100vh per section)
+      const startScroll = `${index * 600}vh`; // Adjust for total screen height (100vh per section)
+      const endScroll = `${index * 1000}vh`; // Adjust for total screen height (100vh per section)
 
       ScrollTrigger.create({
         trigger: section,
         start: startScroll, // Starting point of scroll for each section
         end: endScroll, // Ending point of scroll for each section
-        scrub: 1,
-        markers: true,
+        scrub: 2,
+        // markers: true,
         onEnter: () => setActiveIndex(index), // Activate the heading when the section enters
         onLeave: () => setActiveIndex(index), // Deactivate when leaving the section
         onEnterBack: () => setActiveIndex(index), // Re-activate when scrolling back
@@ -39,9 +40,9 @@ const Page5: React.FC = () => {
     ScrollTrigger.create({
       trigger: ".pinned-content",
       pin: true,
-      markers: true,
+      // markers: true,
       start: "top top",
-      end: "+=3000vh", // Adjust to match the total height of the page
+      end: "+=2500vh", // Adjust to match the total height of the page
     });
   }, []);
 
@@ -59,21 +60,23 @@ const Page5: React.FC = () => {
       icon: icon3,
     },
   ];
-
+  const contentItems = [
+    { desc: "Custom Made ERP Softwares for your Needs", img: img },
+    { desc: "Custom Made CRM Softwares for your Needs", img: img },
+    { desc: "Custom Made HRMS Softwares for your Needs", img: img },
+  ];
   return (
-    <div className="w-full h-[400vh] bg-black hide-scrollbar">
+    <div className="w-full h-[500vh] bg-black hide-scrollbar z-20">
       {/* Content to Pin */}
-      <div className="pinned-content h-screen w-full flex items-center justify-center bg-gray-900">
-        <div className="w-1/3 relative flex flex-col items-start justify-start space-y-6 ml-12">
-          <div className="absolute left-0 top-0 h-[110%] w-2 rounded-md bg-custom-gradient"></div>
+      <div className="pinned-content h-screen w-full flex items-start justify-center py-16 px-20">
+        <div className="w-3/12 relative flex flex-col items-start justify-start space-y-3">
+          <div className="absolute left-[0.625rem] top-6 h-full w-[0.4rem] rounded-md bg-custom-gradient"></div>
           {timelineItems.map((item, index) => (
             <div
               key={index}
-              className={`flex items-center justify-center section relative z-10 transition-transform duration-300 ${
-                activeIndex === index ? "animate-active" : ""
-              }`}
+              className={`flex items-center justify-center section relative transition-transform duration-300`}
             >
-              <div className="relative">
+              <div className="relative bg-custom-gradient rounded-full p-1.5">
                 <Image
                   src={item.icon}
                   alt={`${item.title} Icon`}
@@ -83,10 +86,10 @@ const Page5: React.FC = () => {
               </div>
               <div className="ml-6">
                 <h1
-                  className={`text-white text-sm font-bold ${
+                  className={`text-white text-left text-xs ${
                     activeIndex === index
-                      ? "text-blue-500  border-2 bg-custom-gradient rounded-xl"
-                      : "text-gray-400"
+                      ? "border-2 px-4 rounded-3xl"
+                      : "text-gray-400 px-[1.1rem]"
                   }`}
                 >
                   {item.title}
@@ -95,7 +98,31 @@ const Page5: React.FC = () => {
             </div>
           ))}
         </div>
-        <div className="w-2/3 text-white">nice</div>
+        <div className="w-6/12 text-white">
+          {/* <div className=""> */}
+          {contentItems.map(
+            (item, index) =>
+              index === activeIndex && (
+                <div
+                  key={index}
+                  className="flex flex-col justify-center gap-y-4 items-center mt-16 rounded-2xl w-full h-full"
+                >
+                  <Image src={item.img} alt="nice image" />
+                  <div className="font-bold text-white">{item.desc}</div>
+                  <div className="flex items-center justify-center gap-x-6">
+                    <div className="font-semibold text-sm bg-custom-gradient rounded-3xl py-1.5 px-3.5 text-center">
+                      View Live Demo
+                    </div>
+                    <div className="font-semibold text-sm border-[1.5px] border-white rounded-3xl py-[0.175rem] px-3 text-center">
+                      Purchase Product
+                    </div>
+                  </div>
+                </div>
+              )
+          )}
+          {/* </div> */}
+        </div>
+        <div className="w-3/12"></div>
       </div>
     </div>
   );
