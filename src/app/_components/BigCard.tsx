@@ -20,6 +20,32 @@ const BigCard: React.FC<BigCardProps> = ({
   cardView,
 }) => {
   const iconRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const handleResize = () => {
+      ScrollTrigger.refresh(); // Refreshes ScrollTrigger to recalculate positions
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  useEffect(() => {
+    const forceRedraw = () => {
+      if (iconRef.current) {
+        iconRef.current.style.opacity = "0"; // Temporarily hide
+        iconRef.current.offsetHeight; // Trigger a reflow
+        iconRef.current.style.opacity = "1"; // Make visible again
+      }
+    };
+
+    window.addEventListener("resize", forceRedraw);
+
+    return () => {
+      window.removeEventListener("resize", forceRedraw);
+    };
+  }, []);
 
   useEffect(() => {
     if (cardView && iconRef.current) {
@@ -33,6 +59,7 @@ const BigCard: React.FC<BigCardProps> = ({
           start: "top bottom", // Start animation as soon as the card is in view
           end: "top 20%", // End animation at this scroll position
           scrub: 1, // No syncing with scroll; runs immediately
+          invalidateOnRefresh: true,
           onEnter: () => console.log(`${heading} card entered`),
           onLeave: () => console.log(`${heading} card left`),
         },
@@ -42,7 +69,7 @@ const BigCard: React.FC<BigCardProps> = ({
   }, [cardView, heading]);
 
   return (
-    <div className="w-full min-h-80 max-w-[36rem] rounded-xl shadow-custom-shadow flex px-9 py-8 flex-col items-start justify-center gap-y-3">
+    <div className="w-full min-h-60 md:min-h-80 max-w-[36rem] rounded-xl shadow-custom-shadow flex px-9 py-8 flex-col items-start justify-center gap-y-3">
       <div ref={iconRef} className="relative w-full">
         <Image width={50} height={60} src={icon} alt="icon" />
       </div>

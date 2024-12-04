@@ -27,6 +27,7 @@ const Page4 = () => {
         trigger: containerRef.current,
         pin: true,
         scrub: 0.1,
+        invalidateOnRefresh: true,
         end: () =>
           `+=${containerRef.current.scrollWidth - window.innerWidth * 6}`,
       },
@@ -44,6 +45,7 @@ const Page4 = () => {
             containerAnimation: scrollTween,
             start: "center 75%",
             scrub: true,
+            invalidateOnRefresh: true,
             onEnter: () => {
               setCardViewStates((prev) =>
                 prev.map((view, i) => (i === index ? true : view))
@@ -58,7 +60,32 @@ const Page4 = () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
+  useEffect(() => {
+    const handleResize = () => {
+      ScrollTrigger.refresh(); // Refreshes ScrollTrigger to recalculate positions
+    };
 
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  useEffect(() => {
+    const forceRedraw = () => {
+      if (containerRef.current) {
+        containerRef.current.style.opacity = "0"; // Temporarily hide
+        containerRef.current.offsetHeight; // Trigger a reflow
+        containerRef.current.style.opacity = "1"; // Make visible again
+      }
+    };
+
+    window.addEventListener("resize", forceRedraw);
+
+    return () => {
+      window.removeEventListener("resize", forceRedraw);
+    };
+  }, []);
   return (
     <div className="relative flex-col justify-start h-[500vh] w-[800vw] overflow-y-hidden">
       <div ref={containerRef} className="flex h-screen w-full">
