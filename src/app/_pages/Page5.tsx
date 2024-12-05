@@ -86,9 +86,9 @@ const Page5: React.FC = () => {
               </div>
               <div className="ml-6">
                 <h1
-                  className={`text-white text-left text-xs ${
+                  className={`text-white  text-left text-[0.65rem] ${
                     activeIndex === index
-                      ? "border-2 px-4 rounded-3xl"
+                      ? "px-[1.15rem] py-1 gradient-border"
                       : "text-gray-400 px-[1.1rem]"
                   }`}
                 >

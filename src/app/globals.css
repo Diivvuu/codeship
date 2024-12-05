@@ -17,3 +17,33 @@
 html {
   scroll-behavior: smooth;
 }
+.wrapper {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.gradient-border {
+  position: relative;
+  /* padding: 20px 30px; */
+  display: inline-block;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  padding: 2px; /* control the border thickness */
+  background: linear-gradient(
+    147.75deg,
+    #2b3391 -46.16%,
+    #353b95 -3.75%,
+    #514fa0 67.67%,
+    #7e6fb2 159.17%,
+    #8776b6 177.02%
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
