@@ -66,7 +66,7 @@ const Page5: React.FC = () => {
     { desc: "Custom Made HRMS Softwares for your Needs", img: img },
   ];
   return (
-    <div className="w-full h-[500vh] bg-black hide-scrollbar z-20">
+    <div className="w-full h-[400vh] bg-black hide-scrollbar z-20">
       {/* Content to Pin */}
       <div className="pinned-content h-screen w-full flex items-start justify-center py-16 px-20">
         <div className="w-3/12 relative flex flex-col items-start justify-start space-y-3">
