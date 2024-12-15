@@ -6,7 +6,7 @@ function Page3() {
   return (
     <div className="h-screen w-full flex justify-between items-start px-28 pt-20">
       <div className="w-full">
-        <h2 className="font-semibold leading-8 text-4xl mb-4 w-6/12">
+        <h2 className="font-semibold leading-19 text-5xl mb-4 w-6/12">
           Some of the things we can do for you
         </h2>
         <p className="w-5/12 leading-5">

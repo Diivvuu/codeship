@@ -15,7 +15,10 @@
     "lucide-react": "^0.462.0",
     "next": "14.2.18",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-tsparticles": "^2.12.0",
+    "swiper": "^11.1.15",
+    "tsparticles": "^2.12.0"
   },
   "devDependencies": {
     "@types/locomotive-scroll": "^4.1.4",

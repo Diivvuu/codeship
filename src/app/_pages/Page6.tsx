@@ -177,7 +177,7 @@ const Page6 = () => {
             start: () => `bottom ${window.innerHeight * 0.9}px`, // Start blur at bottom 10vh
             end: () => `bottom ${window.innerHeight}px`,
             scrub: true,
-            markers: true,
+            // markers: true,
           },
         }
       );
@@ -241,10 +241,10 @@ const Page6 = () => {
           {/* <div className="black-box bg-black p-[2.5rem] rounded-xl"></div> */}
           <div className="black-box bg-black p-[2.5rem] rounded-xl"></div>
           <div className="absolute z-20 flex flex-col items-center justify-center">
-            <h2 className="w-4/12 px-20 text-center text-3xl font-semibold mb-4 mx-[2.5rem] text-white mt-28">
+            <h2 className="w-5/12 px-8 text-center text-3xl font-semibold mb-4 mx-[2.5rem] text-white mt-28">
               Amazing tech stack in our pocket
             </h2>
-            <p className="text-xs text-center w-5/12  px-20 mt-2">
+            <p className="text-xs text-center w-5/12  px-10 mt-2">
               Utilize our team's specialized full-stack expertise in software
               development to turn your product vision into reality. We are
               committed to providing solutions that adhere to the highest coding
