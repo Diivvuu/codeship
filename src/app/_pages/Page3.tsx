@@ -19,6 +19,7 @@ function Page3() {
           <Card
             key={index}
             CardIcon={card.imageUrl}
+            CardIconHover={card.imageUrl1}
             CardHeading={card.heading}
             CardContent={card.content}
           />

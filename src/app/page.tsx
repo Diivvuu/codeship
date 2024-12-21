@@ -13,6 +13,7 @@ import ReactLenis from "lenis/react";
 import Page7 from "./_pages/Page7";
 import Page8 from "./_pages/Page8";
 import Page9 from "./_pages/Page9"; // Ensure this is imported correctly
+import Page10 from "./_pages/Page10";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <Page7 />
       <Page8 />
       <Page9 /> {/* Particle background will only be on this page */}
+      <Page10 />
     </div>
   );
 }

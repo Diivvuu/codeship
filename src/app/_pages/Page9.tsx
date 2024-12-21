@@ -1,5 +1,10 @@
 import React, { useEffect } from "react";
 import ParticleBackground from "@/app/_components/Particles"; // Import the particle background component
+import dribble from "@/app/assets/dribbleicon.png";
+import instagram from "@/app/assets/instagramicon.png";
+import linkedin from "@/app/assets/linkedinicon.png";
+import twitter from "@/app/assets/twittericon.png";
+import Image from "next/image";
 
 const Fields = [
   "Web Development",
@@ -10,6 +15,13 @@ const Fields = [
   "AMC",
   "Servers & Hosting",
   "Other Services",
+];
+
+const iconsList = [
+  { el: dribble, name: "dribble" },
+  { el: instagram, name: "instagram" },
+  { el: linkedin, name: "linkedin" },
+  { el: twitter, name: "twitter" },
 ];
 
 const Page9 = () => {
@@ -71,10 +83,17 @@ const Page9 = () => {
       </div>
       <div className="flex justify-center items-center">
         <div className="w-5/12">
-          <div className="font-semibold text-base">Follow us on :</div>
+          <div className="font-[500] text-lg">Follow us on :</div>
+          <div className="flex items-center gap-x-2 mt-4">
+            {iconsList.map((item, index) => {
+              return (
+                <Image src={item.el} alt={item.name} height={35} width={35} />
+              );
+            })}
+          </div>
         </div>
         <div className="w-7/12">
-          <input className="border-b-[1.5px] border-black w-full mt-6" />
+          <input className="border-b-[1.5px] border-black w-full mt-4" />
           <div className="bg-custom-gradient mt-6 text-white rounded-3xl px-8 py-1 text-sm w-fit">
             Submit
           </div>
