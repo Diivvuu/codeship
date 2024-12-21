@@ -25,7 +25,7 @@ const config: Config = {
         #7E6FB2 159.17%, 
         #8776B6 177.02%)`,
         "page2-bg": "url('../app/assets/page2-bg.png')",
-        "page5-bg": "url('../app/assets/page5BG.png')",
+        "page5-bg": "url('../app/assets/Page5BG.png')",
       },
       colors: {
         background: "var(--background)",
