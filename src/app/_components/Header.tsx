@@ -3,23 +3,23 @@ import Image from "next/image";
 
 function Header() {
   return (
-    <div className="flex justify-between items-center py-6 px-16">
+    <div className="flex w-full bg-[#fafafa] fixed top-0 z-50 justify-between items-center h-[15vh] py-12 px-12 pr-20">
       <div>
-        <Image src={logo1} alt="logo" />
+        <Image src={logo1} alt="logo" width={300} />
       </div>
       <div>
-        <div className="flex justify-center items-center gap-x-10 text-[#282828]">
-          <a className="text-transparent bg-clip-text bg-custom-gradient">
+        <div className="flex justify-center text-2xl font-light items-center gap-x-12 text-[#282828]">
+          <div className="text-transparent font-semibold bg-clip-text bg-custom-gradient">
             Home
-          </a>
-          <a>About</a>
-          <a>Services</a>
-          <a>Solutions</a>
-          <a>Our Works</a>
-          <a>Contact</a>
+          </div>
+          <div className="">About</div>
+          <div className="">Services</div>
+          <div className="">Solutions</div>
+          <div className="">Our Works</div>
+          <div className="">Contact</div>
           <a>
-            <div className="flex items-center justify-center gap-x-2 bg-custom-gradient py-2 px-4 rounded-full text-white text-base">
-              <div className="bg-green-600 h-2 w-2 rounded"></div>
+            <div className="flex items-center justify-center gap-x-2 bg-custom-gradient text-xl py-4 px-9 mx-4 rounded-full text-white">
+              <div className="bg-green-600 h-2 w-2 rounded font-light" />
               Let's Talk!
             </div>
           </a>

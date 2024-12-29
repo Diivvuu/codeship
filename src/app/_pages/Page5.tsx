@@ -108,9 +108,9 @@ const Page5: React.FC = () => {
                   className="flex flex-col justify-center gap-y-4 items-center mt-16 rounded-2xl w-full h-full"
                 >
                   <Image src={item.img} alt="nice image" />
-                  <div className="font-bold text-white">{item.desc}</div>
+                  <div className="font-bold text-lg text-white">{item.desc}</div>
                   <div className="flex items-center justify-center gap-x-6">
-                    <div className="font-semibold text-sm bg-custom-gradient rounded-3xl py-1.5 px-3.5 text-center">
+                    <div className="font-semibold text-sm  bg-custom-gradient rounded-3xl py-1.5 px-3.5 text-center">
                       View Live Demo
                     </div>
                     <div className="font-semibold text-sm border-[1.5px] border-white rounded-3xl py-[0.175rem] px-3 text-center">

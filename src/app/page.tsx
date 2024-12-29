@@ -17,7 +17,7 @@ import Page10 from "./_pages/Page10";
 
 export default function Home() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden font-poppins ">
       <Header />
       <Page1 />
       <Page2 />

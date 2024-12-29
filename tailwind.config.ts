@@ -14,6 +14,9 @@ const config: Config = {
         mono: ["var(--font-geist-mono)", ...fontFamily.mono],
         poppins: ["var(--font-poppins)", ...fontFamily.sans],
       },
+      fontWeight: {
+        100: "100",
+      },
       boxShadow: {
         "custom-shadow": "-3px 2px 16.4px 0px #0000001A",
       },

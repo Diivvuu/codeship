@@ -244,7 +244,7 @@ const Page6 = () => {
             <h2 className="w-5/12 px-8 text-center text-3xl font-semibold mb-4 mx-[2.5rem] text-white mt-28">
               Amazing tech stack in our pocket
             </h2>
-            <p className="text-xs text-center w-5/12  px-10 mt-2">
+            <p className="text-xs text-center w-5/12 font-normal px-10 mt-2">
               Utilize our team's specialized full-stack expertise in software
               development to turn your product vision into reality. We are
               committed to providing solutions that adhere to the highest coding

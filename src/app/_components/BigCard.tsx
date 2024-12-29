@@ -74,7 +74,12 @@ const BigCard: React.FC<BigCardProps> = ({
         <Image width={50} height={60} src={icon} alt="icon" />
       </div>
       <div className="text-2xl font-semibold">{heading}</div>
-      <div className="text-wrap text-[#737373]">{content}</div>
+      <div
+        style={{ wordSpacing: "0.1rem" }}
+        className="text-wrap text-base text-[#737373]"
+      >
+        {content}
+      </div>
       <p className="flex items-center font-semibold text-[#504CA0]">
         Read More
         <span className="mt-0.5">
