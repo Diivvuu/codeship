@@ -81,14 +81,14 @@ const Page7: React.FC = () => {
   ];
 
   return (
-    <div className="max-h-screen h-screen w-full bg-black pt-4">
-      <h2 className="text-center text-4xl text-white my-6 font-semibold">
+    <div className="max-h-screen h-full w-full bg-black pt-4">
+      <h2 className="text-center text-6xl text-white mt-8 mb-16 font-semibold">
         Our Latest Projects
       </h2>
       <div>
         <Swiper
           slidesPerView={1.8} // Show one full-width slide and partial sides
-          spaceBetween={80} // Space between slides
+          spaceBetween={90} // Space between slides
           centeredSlides={true} // Center the active slide
           initialSlide={1} // Start with Slide 2 as the center
           // pagination={{ clickable: true }}
@@ -97,20 +97,20 @@ const Page7: React.FC = () => {
           loop={true}
         >
           {projects.map((project, index) => (
-            <SwiperSlide key={index}>
-              <div className="h-[28rem]">
-                <div className="relative h-[90%] bg-[#504CA0] flex flex-col items-center justify-center rounded-2xl shadow-lg scale-[1] transition-transform duration-300">
+            <SwiperSlide key={index} className="min-h-[70vh]">
+              <div className="h-[70vh]">
+                <div className="relative h-[90%] bg-[#504CA0] flex flex-col items-center justify-center rounded-3xl shadow-lg scale-[1] transition-transform duration-300">
                   <div>Slide {index + 1}</div>
                 </div>
-                <div className="absolute bottom-5 -left-5">
-                  <div className="text-3xl font-semibold text-white text-left text-wrap w-60 pr-4">
+                <div className="absolute bottom-11 -left-5">
+                  <div className="text-6xl font-semibold text-white text-left text-wrap w-60 pr-4">
                     {project.title}
                   </div>
-                  <div className="flex justify-center text-center space-x-4 mt-2 text-gray-600">
+                  <div className="flex justify-center text-center space-x-4 mt-4 text-gray-600">
                     {project.categories.map((category, catIndex) => (
                       <span
                         key={catIndex}
-                        className="px-2 py-1 bg-white rounded-full"
+                        className="min-w-32 px-2 py-2 bg-white rounded-full text-base font-normal"
                       >
                         {category}
                       </span>
@@ -122,8 +122,8 @@ const Page7: React.FC = () => {
           ))}
         </Swiper>
       </div>
-      <div className="flex justify-center w-full mt-4 text-center">
-        <button className="px-6 py-1 flex items-center gap-x-3 bg-custom-gradient rounded-3xl text-white">
+      <div className="flex justify-center w-full pb-12 text-center">
+        <button className="px-12 py-3 flex items-center gap-x-3 bg-custom-gradient rounded-3xl text-white font-medium text-xl tracking-wider">
           View All
           <span>
             <MoveRight className="w-6 h-6" />

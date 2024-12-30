@@ -69,18 +69,18 @@ const BigCard: React.FC<BigCardProps> = ({
   }, [cardView, heading]);
 
   return (
-    <div className="w-full min-h-60 md:min-h-80 max-w-[36rem] rounded-xl shadow-custom-shadow flex px-9 py-8 flex-col items-start justify-center gap-y-3">
+    <div className="min-h-60 md:min-h-80 min-w-[36rem] w-[90%] h-[65%] bg-white rounded-3xl shadow-custom-shadow flex px-12 py-8 flex-col items-start justify-center gap-y-10">
       <div ref={iconRef} className="relative w-full">
-        <Image width={50} height={60} src={icon} alt="icon" />
+        <Image src={icon} alt="icon" />
       </div>
-      <div className="text-2xl font-semibold">{heading}</div>
+      <div className="text-6xl font-medium">{heading}</div>
       <div
         style={{ wordSpacing: "0.1rem" }}
-        className="text-wrap text-base text-[#737373]"
+        className="text-wrap text-2xl font-normal text-[#737373]"
       >
         {content}
       </div>
-      <p className="flex items-center font-semibold text-[#504CA0]">
+      <p className="flex items-center font-medium text-2xl text-[#504CA0]">
         Read More
         <span className="mt-0.5">
           <ChevronRight className="size-3.5" style={{ strokeWidth: "3" }} />

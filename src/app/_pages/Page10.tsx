@@ -2,65 +2,69 @@ import React from "react";
 
 function Page10() {
   return (
-    <div className="min-h-[50vh] w-full bg-white text-[#282828] flex items-center justify-between px-28 pt-20">
+    <div className="min-h-[80vh] w-full bg-[#FAFAFA] text-[#282828] flex items-center justify-between px-36 pt-20">
       <div className="flex flex-col items-start py-8 justify-between h-[65vh] w-6/12">
         <div>
-          <h1 className="font-bold text-5xl">Let's Talk</h1>
-          <a className="text-xl underline">support@codeship.in</a>
+          <h1 className="font-semibold text-[5rem]">Let's Talk</h1>
+          <a className="text-4xl font-normal tracking-tighter underline">
+            support@codeship.in
+          </a>
         </div>
-        <div className="w-7/12 text-lg">
+        <div className="w-7/12 text-[1.8rem] tracking-tight">
           <p>
             No 1, 1st Floor, Narasimhan St, Jothi Nagar, West Mambalam, Chennai,
             Tamil Nadu 600033
           </p>
-          <div className="flex items-center my-6 gap-x-6 justify-start pl-6">
-            <p className="text-base relative">
+          <div className="flex items-center my-4 gap-x-6 justify-start pl-6 text-2xl">
+            <p className="relative">
               Privacy
               <span className="absolute -left-[0.05rem] right-0 bottom-[-2px] h-[1px] bg-black"></span>
             </p>
-            <p className="text-base relative">
+            <p className="relative">
               Terms
               <span className="absolute -left-[0.05rem] right-0 bottom-[-2px] h-[1px] bg-black"></span>
             </p>
-            <p className="text-base relative">
+            <p className="relative">
               Sitemap
               <span className="absolute -left-[0.05rem] right-0 bottom-[-2px] h-[1px] bg-black"></span>
             </p>
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-end h-[65vh] items-center gap-y-8 pb-12 w-6/12">
+      <div className="flex flex-col justify-end h-[65vh] items-center gap-y-8 pb-12 w-6/12 text-3xl">
         <div className="flex items-center justify-between w-full px-36">
-          <div className="text-lg relative">
+          <div className="relative">
             Home
-            <span className="absolute -left-[0.05rem] right-0 bottom-[-2px] h-[1px] bg-black"></span>
+            <span className="absolute -left-[0.05rem] right-0 bottom-[-2px] h-[1.5px] bg-black"></span>
           </div>
-          <div className="text-lg relative">
+          <div className="relative">
             Solutions
-            <span className="absolute -left-[0.05rem] right-0 bottom-[-2px] h-[1px] bg-black"></span>
+            <span className="absolute -left-[0.05rem] right-0 bottom-[-2px] h-[1.5px] bg-black"></span>
           </div>
         </div>
         <div className="flex items-center justify-between w-full px-36">
-          <div className="text-lg relative">
+          <div className="relative">
             About
             <span className="absolute -left-[0.05rem] right-0 bottom-[-2px] h-[1.5px] bg-black"></span>
           </div>
-          <div className="text-lg relative">
+          <div className="relative">
             Our Works
             <span className="absolute -left-[0.05rem] right-0 bottom-[-2px] h-[1.5px] bg-black"></span>
           </div>
         </div>
         <div className="flex items-center justify-between w-full px-36">
-          <div className="text-lg relative">
+          <div className="relative">
             Capabilities
-            <span className="absolute -left-[0.05rem] right-0 bottom-[-2px] h-[1px] bg-black"></span>
+            <span className="absolute -left-[0.05rem] right-0 bottom-[-2px] h-[1.5px] bg-black"></span>
           </div>
-          <div className="text-lg relative">
+          <div className="relative">
             Contact
-            <span className="absolute -left-[0.05rem] right-0 bottom-[-2px] h-[1.1px] bg-black"></span>
+            <span className="absolute -left-[0.05rem] right-0 bottom-[-2px] h-[1.5px] bg-black"></span>
           </div>
         </div>
-        <div className="text-xl mt-12">@ 2021 - 2024 Codeship pvt Ltd.</div>
+        <div className="text-3xl font-normal mt-12">
+          @ 2021 - 2024 Codeship pvt Ltd.
+        </div>
       </div>
     </div>
   );

@@ -190,170 +190,116 @@ const Page6 = () => {
       <div className="blur-overlay"></div>
       {/* Tech Stack Grid Layout */}
       <div className="flex flex-col justify-center items-center gap-y-4">
-        <div className="flex items-center justify-center gap-x-4">
-          <div className=" black-box bg-black rounded-xl image-box w-20 h-20">
-            <div className="absolute dynamic-margin-down-left flex items-center justify-center bg-white rounded-xl w-20 h-20">
-              <Image className="" src={aws} height={70} width={70} alt="aws" />
+        <div className="flex items-center justify-center gap-x-6">
+          <div className=" black-box bg-black rounded-xl image-box w-28 h-28">
+            <div className="absolute dynamic-margin-down-left flex items-center justify-center bg-white rounded-3xl w-28 h-28">
+              <Image className="" src={aws} alt="aws" />
             </div>
           </div>
-          <div className="black-box bg-gray-400 p-[2.5rem] rounded-xl"></div>
-          <div className="black-box bg-gray-400 p-[2.5rem] rounded-xl"></div>
-          <div className="black-box bg-gray-400 p-[2.5rem] rounded-xl"></div>
-          <div className="black-box bg-gray-400 p-[2.5rem] rounded-xl"></div>
+          <div className="black-box bg-gray-400 p-[3.5rem] rounded-3xl"></div>
+          <div className="black-box bg-gray-400 p-[3.5rem] rounded-3xl"></div>
+          <div className="black-box bg-gray-400 p-[3.5rem] rounded-3xl"></div>
+          <div className="black-box bg-gray-400 p-[3.5rem] rounded-3xl"></div>
         </div>
-        <div className="flex items-center justify-center gap-x-4">
-          <div className="black-box bg-gray-400 p-[2.5rem] rounded-xl"></div>
-          <div className="black-box bg-gray-400 p-[2.5rem] rounded-xl"></div>
-          <div className="black-box bg-gray-400 p-[2.5rem] rounded-xl"></div>
-          <div className=" black-box bg-black rounded-xl image-box w-20 h-20">
-            <div className="absolute dynamic-margin-down flex items-center justify-center bg-white rounded-xl w-20 h-20">
-              <Image className="" src={aws} height={70} width={70} alt="aws" />
+        <div className="flex items-center justify-center gap-x-6">
+          <div className="black-box bg-gray-400 p-[3.5rem] rounded-3xl"></div>
+          <div className="black-box bg-gray-400 p-[3.5rem] rounded-3xl"></div>
+          <div className="black-box bg-gray-400 p-[3.5rem] rounded-3xl"></div>
+          <div className=" black-box bg-black rounded-xl image-box w-28 h-28">
+            <div className="absolute dynamic-margin-down flex items-center justify-center bg-white rounded-3xl w-28 h-28">
+              <Image className="" src={aws} alt="aws" />
             </div>
           </div>
-          <div className="black-box bg-gray-400 p-[2.5rem] rounded-xl"></div>
-          <div className=" black-box bg-black rounded-xl image-box w-20 h-20">
-            <div className="absolute dynamic-margin-down-right flex items-center justify-center bg-white rounded-xl w-20 h-20">
-              <Image
-                className=""
-                src={node}
-                height={70}
-                width={70}
-                alt="node"
-              />
+          <div className="black-box bg-gray-400 p-[3.5rem] rounded-3xl"></div>
+          <div className=" black-box bg-black rounded-3xl image-box w-28 h-28">
+            <div className="absolute dynamic-margin-down-right flex items-center justify-center bg-white rounded-3xl w-28 h-28">
+              <Image className="" src={node} alt="node" />
             </div>
           </div>
-          <div className="black-box bg-gray-400 p-[2.5rem] rounded-xl"></div>
+          <div className="black-box bg-gray-400 p-[3.5rem] rounded-3xl"></div>
         </div>
-        <div className="flex items-center justify-center gap-x-4">
-          <div className="black-box bg-gray-400 p-[2.5rem] rounded-xl"></div>
-          <div className=" black-box bg-black rounded-xl image-box w-20 h-20">
-            <div className="absolute dynamic-margin-left flex items-center justify-center bg-white rounded-xl w-20 h-20">
-              <Image
-                className=""
-                src={react}
-                height={70}
-                width={70}
-                alt="react"
-              />
+        <div className="flex items-center justify-center gap-x-6">
+          <div className="black-box bg-gray-400 p-[3.5rem] rounded-3xl"></div>
+          <div className=" black-box bg-black rounded-xl image-box w-28 h-28">
+            <div className="absolute dynamic-margin-left flex items-center justify-center bg-white rounded-3xl w-28 h-28">
+              <Image className="" src={react} alt="react" />
             </div>
           </div>
-          <div className="black-box bg-black p-[2.5rem] rounded-xl"></div>
+          <div className="black-box bg-black p-[3.5rem] rounded-3xl"></div>
           {/* <div className="black-box bg-black p-[2.5rem] rounded-xl"></div> */}
-          <div className="black-box bg-black p-[2.5rem] rounded-xl"></div>
+          <div className="black-box bg-black p-[3.5rem] rounded-3xl"></div>
           <div className="absolute z-20 flex flex-col items-center justify-center">
-            <h2 className="w-5/12 px-8 text-center text-3xl font-semibold mb-4 mx-[2.5rem] text-white mt-28">
+            <h2 className="w-5/12 px-8 text-center text-5xl font-semibold mb-4 mx-[2.5rem] text-white mt-32">
               Amazing tech stack in our pocket
             </h2>
-            <p className="text-xs text-center w-5/12 font-normal px-10 mt-2">
+            <p className="text-center w-6/12 font-normal tracking-tight leading-relaxed text-base px-12 mt-2">
               Utilize our team's specialized full-stack expertise in software
               development to turn your product vision into reality. We are
               committed to providing solutions that adhere to the highest coding
               standards, ensuring reliability, scalability, and security.
             </p>
           </div>
-          <div className="black-box bg-black p-[2.5rem] rounded-xl"></div>
+          <div className="black-box bg-black p-[3.5rem] rounded-3xl"></div>
 
-          <div className="black-box bg-black p-[2.5rem] rounded-xl"></div>
-          <div className="black-box bg-black p-[2.5rem] rounded-xl"></div>
-          <div className=" black-box bg-black rounded-xl image-box w-20 h-20">
-            <div className="absolute dynamic-margin-right flex items-center justify-center bg-white rounded-xl w-20 h-20 z-20">
-              <Image
-                className=""
-                src={react}
-                height={70}
-                width={70}
-                alt="react"
-              />
+          <div className="black-box bg-black p-[3.5rem] rounded-3xl"></div>
+          <div className="black-box bg-black p-[3.5rem] rounded-3xl"></div>
+          <div className=" black-box bg-black rounded-3xl image-box w-28 h-28">
+            <div className="absolute dynamic-margin-right flex items-center justify-center bg-white rounded-3xl w-28 h-28 z-20">
+              <Image className="" src={react} alt="react" />
             </div>
           </div>
-          <div className="black-box bg-gray-400 p-[2.5rem] rounded-xl"></div>
+          <div className="black-box bg-gray-400 p-[3.5rem] rounded-3xl"></div>
         </div>
 
-        <div className="flex items-center justify-center gap-x-4">
-          <div className=" black-box bg-black rounded-xl image-box w-20 h-20">
-            <div className="absolute dynamic-margin-left flex items-center justify-center bg-white rounded-xl w-20 h-20">
-              <Image
-                className=""
-                src={angular}
-                height={70}
-                width={70}
-                alt="angular"
-              />
+        <div className="flex items-center justify-center gap-x-6">
+          <div className=" black-box bg-black rounded-3xl image-box w-28 h-28">
+            <div className="absolute dynamic-margin-left flex items-center justify-center bg-white rounded-3xl w-28 h-28">
+              <Image className="" src={angular} alt="angular" />
             </div>
           </div>
-          <div className="black-box bg-gray-400 p-[2.5rem] rounded-xl"></div>
+          <div className="black-box bg-gray-400 p-[3.5rem] rounded-3xl"></div>
           {/* <div className="black-box bg-black p-[2.5rem] rounded-xl"></div> */}
-          <div className="black-box bg-black p-[2.5rem] rounded-xl"></div>
-          <div className="black-box bg-black p-[2.5rem] rounded-xl"></div>
-          <div className="black-box bg-black p-[2.5rem] rounded-xl"></div>
-          <div className="black-box bg-black p-[2.5rem] rounded-xl"></div>
-          <div className="black-box bg-black p-[2.5rem] rounded-xl"></div>
-          <div className="black-box bg-gray-400 p-[2.5rem] rounded-xl"></div>
-          <div className=" black-box bg-black rounded-xl image-box w-20 h-20">
-            <div className="absolute dynamic-margin-right flex items-center justify-center bg-white rounded-xl w-20 h-20 z-20">
-              <Image
-                className=""
-                src={node}
-                height={70}
-                width={70}
-                alt="node"
-              />
+          <div className="black-box bg-black p-[3.5rem] rounded-3xl"></div>
+          <div className="black-box bg-black p-[3.5rem] rounded-3xl"></div>
+          <div className="black-box bg-black p-[3.5rem] rounded-3xl"></div>
+          <div className="black-box bg-black p-[3.5rem] rounded-3xl"></div>
+          <div className="black-box bg-black p-[3.5rem] rounded-3xl"></div>
+          <div className="black-box bg-gray-400 p-[3.5rem] rounded-3xl"></div>
+          <div className=" black-box bg-black rounded-3xl image-box w-28 h-28">
+            <div className="absolute dynamic-margin-right flex items-center justify-center bg-white rounded-3xl w-28 h-28 z-20">
+              <Image className="" src={node} alt="node" />
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-center gap-x-4">
-          <div className=" black-box bg-black rounded-xl image-box w-20 h-20">
-            <div className="absolute dynamic-margin-up-left flex items-center justify-center bg-white rounded-xl w-20 h-20">
-              <Image
-                className=""
-                src={angular}
-                height={70}
-                width={70}
-                alt="angular"
-              />
+        <div className="flex items-center justify-center gap-x-6">
+          <div className=" black-box bg-black rounded-3xl image-box w-28 h-28">
+            <div className="absolute dynamic-margin-up-left flex items-center justify-center bg-white rounded-3xl w-28 h-28">
+              <Image className="" src={angular} alt="angular" />
             </div>
           </div>
-          <div className="black-box bg-gray-400 p-[2.5rem] rounded-xl"></div>
-          <div className="black-box bg-gray-400 p-[2.5rem] rounded-xl"></div>
-          <div className="black-box bg-gray-400 p-[2.5rem] rounded-xl"></div>
-          <div className=" black-box bg-black rounded-xl image-box w-20 h-20">
-            <div className="absolute dynamic-margin-up flex items-center justify-center bg-white rounded-xl w-20 h-20 z-20">
-              <Image
-                className=""
-                src={react}
-                height={70}
-                width={70}
-                alt="react"
-              />
+          <div className="black-box bg-gray-400 p-[3.5rem] rounded-3xl"></div>
+          <div className="black-box bg-gray-400 p-[3.5rem] rounded-3xl"></div>
+          <div className="black-box bg-gray-400 p-[3.5rem] rounded-3xl"></div>
+          <div className=" black-box bg-black rounded-3xl image-box w-28 h-28">
+            <div className="absolute dynamic-margin-up flex items-center justify-center bg-white rounded-3xl w-28 h-28 z-20">
+              <Image className="" src={react} alt="react" />
             </div>
           </div>
-          <div className="black-box bg-gray-400 p-[2.5rem] rounded-xl"></div>
-          <div className="black-box bg-gray-400 p-[2.5rem] rounded-xl"></div>
+          <div className="black-box bg-gray-400 p-[3.5rem] rounded-3xl"></div>
+          <div className="black-box bg-gray-400 p-[3.5rem] rounded-3xl"></div>
         </div>
-        <div className="flex items-center justify-center gap-x-4">
-          <div className="black-box bg-gray-400 p-[2.5rem] rounded-xl"></div>
-          <div className=" black-box bg-black rounded-xl image-box w-20 h-20">
-            <div className="absolute dynamic-margin-up flex items-center justify-center bg-white rounded-xl w-20 h-20 z-20">
-              <Image
-                className=""
-                src={react}
-                height={70}
-                width={70}
-                alt="react"
-              />
+        <div className="flex items-center justify-center gap-x-6">
+          <div className="black-box bg-gray-400 p-[3.5rem] rounded-3xl"></div>
+          <div className=" black-box bg-black rounded-3xl image-box w-28 h-28">
+            <div className="absolute dynamic-margin-up flex items-center justify-center bg-white rounded-3xl w-28 h-28 z-20">
+              <Image className="" src={react} alt="react" />
             </div>
           </div>
-          <div className="black-box bg-gray-400 p-[2.5rem] rounded-xl"></div>
-          <div className="black-box bg-gray-400 p-[2.5rem] rounded-xl"></div>
-          <div className=" black-box bg-black rounded-xl image-box w-20 h-20">
-            <div className="absolute dynamic-margin-up-right flex items-center justify-center bg-white rounded-xl w-20 h-20 z-20">
-              <Image
-                className=""
-                src={angular}
-                height={70}
-                width={70}
-                alt="angular"
-              />
+          <div className="black-box bg-gray-400 p-[3.5rem] rounded-3xl"></div>
+          <div className="black-box bg-gray-400 p-[3.5rem] rounded-3xl"></div>
+          <div className=" black-box bg-black rounded-3xl image-box w-28 h-28">
+            <div className="absolute dynamic-margin-up-right flex items-center justify-center bg-white rounded-3xl w-28 h-28 z-20">
+              <Image className="" src={angular} alt="angular" />
             </div>
           </div>
         </div>

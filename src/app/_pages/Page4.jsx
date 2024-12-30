@@ -90,19 +90,25 @@ const Page4 = () => {
     <div className="relative flex-col justify-start h-[500vh] w-[800vw] overflow-y-hidden">
       <div ref={containerRef} className="flex h-screen w-full">
         <section className="panel h-full w-[50vw]">
-          <div className="flex w-full h-full items-center justify-center px-28">
-            <div className="h-full flex flex-col justify-center items-start gap-y-2">
-              <p className="text-xs">How can we help you</p>
-              <h2 className="text-5xl font-semibold text-wrap w-5/12">
-                Services We Offer
-              </h2>
-              <p className="w-8/12">
-                We offer a comprehensive range of software development services
-                tailored to meet the unique needs of your business. A
-                full-service creative agency designing and building inventive
-                digital experiences across all platforms and brand touchpoints
-              </p>
-              <div className="flex  items-center  gap-x-1.5 bg-custom-gradient px-5 py-1.5 rounded-full text-white text-sm font-semibold">
+          <div className="flex w-full h-full items-center justify-center px-36">
+            <div className="h-full flex flex-col justify-center items-start gap-y-4">
+              <div>
+                <p className="text-lg font-medium text-[#595757]">
+                  How can we help you
+                </p>
+                <h2 className="text-[4rem] leading-tight font-semibold text-wrap w-6/12 tracking-wider">
+                  Services We Offer
+                </h2>
+              </div>
+              <div>
+                <p className="w-full text-2xl font-normal leading-relaxed tracking-wider">
+                  We offer a comprehensive range of software development
+                  services tailored to meet the unique needs of your business. A
+                  full-service creative agency designing and building inventive
+                  digital experiences across all platforms and brand touchpoints
+                </p>
+              </div>
+              <div className="flex items-center font-medium gap-x-1.5 bg-custom-gradient px-10 py-3.5 tracking-wider rounded-full text-white text-xl">
                 All Services
                 <span className="mt-0.5">
                   <ArrowRight className="size-4" />

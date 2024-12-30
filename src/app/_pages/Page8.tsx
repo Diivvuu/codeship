@@ -8,12 +8,12 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 function Page8() {
   return (
-    <div className="bg-white flex items-center h-screen w-full px-28">
+    <div className="bg-[#FAFAFA] flex items-center h-screen w-full px-36">
       <div className="w-7/12 flex flex-col justify-center h-full gap-y-12 items-start">
-        <div className="text-[#282828] text-3xl font-semibold">
+        <div className="text-[#282828] text-5xl font-semibold leading-tight">
           Hear What Our <br /> Customers Are Saying!
         </div>
-        <div className="text-base text-[#1C3433] w-11/12">
+        <div className="text-lg text-[#1C3433] font-normal w-full pr-28 leading-relaxed">
           "Working with Codeship Pvt Ltd to design and develop our eCommerce
           website has been an absolute game-changer for our business. The team
           was professional, responsive, and truly understood our vision. The
@@ -27,28 +27,28 @@ function Page8() {
         <div className="flex justify-between w-11/12">
           <div className="flex items-center gap-x-4">
             <div>
-              <Image src={customerImg1} alt="customerImg1" width={70} />
+              <Image src={customerImg1} alt="customerImg1" />
             </div>
-            <div className="flex flex-col justify-center items-start font-semibold">
+            <div className="flex flex-col justify-center items-start text-2xl font-semibold">
               <div>Suyash Sharma</div>
               <div>Founder, Factory Mode</div>
             </div>
           </div>
           <div>
-            <Image src={customerLogo1} width={80} alt="customerLogo1" />
+            <Image src={customerLogo1} alt="customerLogo1" />
           </div>
         </div>
         <div className="flex items-center gap-x-8">
-          <div className="bg-custom-gradient rounded-full text-white p-1.5">
+          <div className="bg-custom-gradient rounded-full text-white p-3.5">
             <ChevronLeft className="size-6 pr-0.5" />
           </div>
-          <div className="bg-custom-gradient rounded-full text-white p-1.5">
+          <div className="bg-custom-gradient rounded-full text-white p-3.5">
             <ChevronRight className="size-6 pl-0.5" />
           </div>
         </div>
       </div>
       <div className="w-5/12 flex justify-center items-center">
-        <Image src={Page8Right} width={400} alt="bg" />
+        <Image src={Page8Right} alt="bg" />
       </div>
     </div>
   );

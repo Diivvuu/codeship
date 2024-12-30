@@ -19,7 +19,7 @@ function Card({
 
   return (
     <div
-      className="group relative flex flex-col justify-start items-start w-60 min-h-fit py-2 pb-6 shadow-custom-shadow text-black bg-white px-5 rounded-3xl overflow-hidden transition-transform duration-500 ease-in-out group-hover:bg-custom-gradient group-hover:text-white transform-cpu hover:rotate-[-3deg]"
+      className="group relative flex flex-col justify-start items-start w-[90%] min-h-fit h-[80%] shadow-custom-shadow text-black bg-white py-3 p-8 rounded-3xl overflow-hidden transition-transform duration-500 ease-in-out group-hover:bg-custom-gradient group-hover:text-white transform-cpu hover:rotate-[-3deg]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -30,16 +30,18 @@ function Card({
       <div className="relative flex items-center justify-center gap-x-2 pt-2 pb-4 text-transparent bg-clip-text bg-custom-gradient font-semibold group-hover:text-white z-10">
         <div>
           <Image
-            height={22}
-            width={22}
             src={isHovered ? CardIconHover : CardIcon} // Dynamically switch icons
             alt="icon"
             className=""
           />
         </div>
-        <div className="text-xl text-wrap">{CardHeading}</div>
+        <div className="text-3xl font-poppins text-wrap font-medium">
+          {CardHeading}
+        </div>
       </div>
-      <div className="text-xs group-hover:text-white z-10">{CardContent}</div>
+      <div className="text-lg group-hover:text-white z-10 font-normal">
+        {CardContent}
+      </div>
     </div>
   );
 }

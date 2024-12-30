@@ -68,27 +68,27 @@ const Page5: React.FC = () => {
   return (
     <div className="w-full h-[300vh] hide-scrollbar z-20">
       {/* Content to Pin */}
-      <div className="pinned-content bg-contain bg-page5-bg min-h-screen h-full w-full flex items-start justify-center py-16 px-20">
-        <div className="w-3/12 relative flex flex-col items-start justify-start space-y-3">
-          <div className="absolute left-[0.625rem] top-6 h-full w-[0.4rem] rounded-md bg-custom-gradient"></div>
+      <div className="pinned-content bg-contain bg-page5-bg pt-[20vh] min-h-screen h-full w-full flex items-start justify-center py-16 px-36">
+        <div className="w-3/12 relative flex flex-col items-start justify-start space-y-5">
+          <div className="absolute left-[1.55rem] top-6 h-full w-[0.4rem] rounded-md bg-custom-gradient"></div>
           {timelineItems.map((item, index) => (
             <div
               key={index}
               className={`flex items-center justify-center section relative transition-transform duration-300`}
             >
-              <div className="relative bg-custom-gradient rounded-full p-1.5">
+              <div className="relative bg-custom-gradient rounded-full p-3">
                 <Image
                   src={item.icon}
                   alt={`${item.title} Icon`}
-                  width={15}
-                  height={15}
+                  // width={15}
+                  // height={15}
                 />
               </div>
               <div className="ml-6">
                 <h1
-                  className={`text-white  text-left text-[0.65rem] ${
+                  className={`text-white  text-center text-lg font-400 ${
                     activeIndex === index
-                      ? "px-[1.15rem] py-1 gradient-border"
+                      ? "px-6 py-2 gradient-border"
                       : "text-gray-400 px-[1.1rem]"
                   }`}
                 >
@@ -98,22 +98,24 @@ const Page5: React.FC = () => {
             </div>
           ))}
         </div>
-        <div className="w-6/12 text-white">
+        <div className="w-6/12 text-white h-full">
           {/* <div className=""> */}
           {contentItems.map(
             (item, index) =>
               index === activeIndex && (
                 <div
                   key={index}
-                  className="flex flex-col justify-center gap-y-4 items-center mt-16 rounded-2xl w-full h-full"
+                  className="flex flex-col justify-start gap-y-6 items-center mt-16 rounded-2xl w-full h-full"
                 >
-                  <Image src={item.img} alt="nice image" />
-                  <div className="font-bold text-lg text-white">{item.desc}</div>
+                  <Image src={item.img} alt="nice image" className="mt-8" />
+                  <div className="font-semibold text-2xl text-white">
+                    {item.desc}
+                  </div>
                   <div className="flex items-center justify-center gap-x-6">
-                    <div className="font-semibold text-sm  bg-custom-gradient rounded-3xl py-1.5 px-3.5 text-center">
+                    <div className="font-semibold text-lg  bg-custom-gradient rounded-3xl py-2.5 px-6 text-center">
                       View Live Demo
                     </div>
-                    <div className="font-semibold text-sm border-[1.5px] border-white rounded-3xl py-[0.175rem] px-3 text-center">
+                    <div className="font-semibold text-lg border-[1.5px] border-white rounded-3xl py-[0.475rem] px-4 text-center">
                       Purchase Product
                     </div>
                   </div>

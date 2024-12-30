@@ -37,38 +37,38 @@ const Page9 = () => {
   }, []);
 
   return (
-    <div className="w-full min-h-screen bg-white pt-12 px-28 relative">
+    <div className="w-full min-h-screen bg-[#FAFAFA] pt-12 px-36 relative">
       {/* <ParticleBackground /> */}
-      <div className="text-5xl font-[550]">Have an innovative thought?</div>
+      <div className="text-6xl font-semibold ">Have an innovative thought?</div>
       <div className="w-full flex justify-center items-start my-8">
-        <div className="w-5/12 text-3xl font-normal">Tell us about it.</div>
-        <div className="w-7/12 flex flex-col justify-center items-start gap-y-4 h-full">
+        <div className="w-5/12 text-5xl font-medium">Tell us about it.</div>
+        <div className="w-7/12 flex flex-col justify-center items-start gap-y-12 pt-12 h-full">
           <div className="flex justify-center items-center w-full gap-x-20">
             <div className="flex flex-col items-start justify-center w-full gap-y-6">
-              <p className="text-base">Name & Company</p>
+              <p className="text-xl">Name & Company</p>
               <input className="border-b-[1.5px] border-black w-full" />
             </div>
             <div className="flex flex-col items-start justify-center w-full gap-y-6">
-              <p className="text-base">E-mail id</p>
-              <input className="border-b-[1.5px] border-black w-full" />
+              <p className="text-xl">E-mail id</p>
+              <input className="border-b-[1.5px] bg-[#FAFAFA] border-black w-full" />
             </div>
           </div>
           <div className="flex justify-center items-center w-full gap-x-20">
             <div className="flex flex-col items-start justify-center w-full gap-y-6">
-              <p className="text-base">Mobile Number</p>
+              <p className="text-xl">Mobile Number</p>
               <input className="border-b-[1.5px] border-black w-full" />
             </div>
             <div className="flex flex-col items-start justify-center w-full gap-y-6">
-              <p className="text-base">Subject</p>
+              <p className="text-xl">Subject</p>
               <input className="border-b-[1.5px] border-black w-full" />
             </div>
           </div>
           <div className="w-full">
-            <p className="my-2 text-base">I'm interested in</p>
+            <p className="my-2 text-xl">I'm interested in</p>
             <div className="w-full flex flex-wrap gap-x-4 gap-y-3 mt-6">
               {Fields.map((item, index) => (
                 <div
-                  className="border-[1.5px] text-xs border-black rounded-3xl min-w-[9.9rem] text-center py-1"
+                  className="border-[1.5px] text-base border-black rounded-3xl min-w-52 text-center py-1"
                   key={index}
                 >
                   {item}
@@ -77,24 +77,24 @@ const Page9 = () => {
             </div>
           </div>
           <div className="w-full mt-2">
-            <p className="text-base">Tell us more about your project</p>
+            <p className="text-xl font-normal">
+              Tell us more about your project
+            </p>
           </div>
         </div>
       </div>
       <div className="flex justify-center items-center">
         <div className="w-5/12">
-          <div className="font-[500] text-lg">Follow us on :</div>
-          <div className="flex items-center gap-x-2 mt-4">
+          <div className="font-medium text-4xl">Follow us on :</div>
+          <div className="flex items-center gap-x-5 mt-4">
             {iconsList.map((item, index) => {
-              return (
-                <Image src={item.el} alt={item.name} height={35} width={35} />
-              );
+              return <Image src={item.el} alt={item.name} />;
             })}
           </div>
         </div>
         <div className="w-7/12">
           <input className="border-b-[1.5px] border-black w-full mt-4" />
-          <div className="bg-custom-gradient mt-6 text-white rounded-3xl px-8 py-1 text-sm w-fit">
+          <div className="bg-custom-gradient mt-6 text-white rounded-full px-12 py-3 text-lg w-fit">
             Submit
           </div>
         </div>
