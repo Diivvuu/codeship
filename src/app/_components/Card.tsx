@@ -35,7 +35,7 @@ function Card({
             className=""
           />
         </div>
-        <div className="text-3xl font-poppins text-wrap font-medium">
+        <div className="text-2xl font-poppins text-wrap font-medium">
           {CardHeading}
         </div>
       </div>

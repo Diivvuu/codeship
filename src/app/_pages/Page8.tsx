@@ -10,7 +10,7 @@ function Page8() {
   return (
     <div className="bg-[#FAFAFA] flex items-center h-screen w-full px-36">
       <div className="w-7/12 flex flex-col justify-center h-full gap-y-12 items-start">
-        <div className="text-[#282828] text-5xl font-semibold leading-tight">
+        <div className="text-[#282828] text-4xl font-semibold leading-tight">
           Hear What Our <br /> Customers Are Saying!
         </div>
         <div className="text-lg text-[#1C3433] font-normal w-full pr-28 leading-relaxed">
@@ -29,7 +29,7 @@ function Page8() {
             <div>
               <Image src={customerImg1} alt="customerImg1" />
             </div>
-            <div className="flex flex-col justify-center items-start text-2xl font-semibold">
+            <div className="flex flex-col justify-center items-start text-xl font-semibold">
               <div>Suyash Sharma</div>
               <div>Founder, Factory Mode</div>
             </div>

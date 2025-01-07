@@ -96,19 +96,19 @@ const Page4 = () => {
                 <p className="text-lg font-medium text-[#595757]">
                   How can we help you
                 </p>
-                <h2 className="text-[4rem] leading-tight font-semibold text-wrap w-6/12 tracking-wider">
+                <h2 className="text-[3.3rem] leading-tight font-semibold text-wrap w-6/12 tracking-wider">
                   Services We Offer
                 </h2>
               </div>
               <div>
-                <p className="w-full text-2xl font-normal leading-relaxed tracking-wider">
+                <p className="w-full text-xl font-normal leading-relaxed tracking-wider">
                   We offer a comprehensive range of software development
                   services tailored to meet the unique needs of your business. A
                   full-service creative agency designing and building inventive
                   digital experiences across all platforms and brand touchpoints
                 </p>
               </div>
-              <div className="flex items-center font-medium gap-x-1.5 bg-custom-gradient px-10 py-3.5 tracking-wider rounded-full text-white text-xl">
+              <div className="flex items-center font-medium gap-x-1.5 bg-custom-gradient px-10 py-3.5 tracking-wider rounded-full text-white text-lg">
                 All Services
                 <span className="mt-0.5">
                   <ArrowRight className="size-4" />

@@ -82,7 +82,7 @@ const Page7: React.FC = () => {
 
   return (
     <div className="max-h-screen h-full w-full bg-black pt-4">
-      <h2 className="text-center text-6xl text-white mt-8 mb-16 font-semibold">
+      <h2 className="text-center text-5xl text-white mt-8 mb-16 font-semibold">
         Our Latest Projects
       </h2>
       <div>
@@ -103,7 +103,7 @@ const Page7: React.FC = () => {
                   <div>Slide {index + 1}</div>
                 </div>
                 <div className="absolute bottom-11 -left-5">
-                  <div className="text-6xl font-semibold text-white text-left text-wrap w-60 pr-4">
+                  <div className="text-5xl font-semibold text-white text-left text-wrap w-60 pr-4">
                     {project.title}
                   </div>
                   <div className="flex justify-center text-center space-x-4 mt-4 text-gray-600">
@@ -123,7 +123,7 @@ const Page7: React.FC = () => {
         </Swiper>
       </div>
       <div className="flex justify-center w-full pb-12 text-center">
-        <button className="px-12 py-3 flex items-center gap-x-3 bg-custom-gradient rounded-3xl text-white font-medium text-xl tracking-wider">
+        <button className="px-12 py-3 flex items-center gap-x-3 bg-custom-gradient rounded-3xl text-white font-medium text-lg tracking-wider">
           View All
           <span>
             <MoveRight className="w-6 h-6" />

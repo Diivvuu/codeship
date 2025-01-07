@@ -5,17 +5,17 @@ function Page10() {
     <div className="min-h-[80vh] w-full bg-[#FAFAFA] text-[#282828] flex items-center justify-between px-36 pt-20">
       <div className="flex flex-col items-start py-8 justify-between h-[65vh] w-6/12">
         <div>
-          <h1 className="font-semibold text-[5rem]">Let's Talk</h1>
-          <a className="text-4xl font-normal tracking-tighter underline">
+          <h1 className="font-semibold text-[4rem]">Let's Talk</h1>
+          <a className="text-3xl font-normal tracking-tighter underline">
             support@codeship.in
           </a>
         </div>
-        <div className="w-7/12 text-[1.8rem] tracking-tight">
+        <div className="w-7/12 text-[1.5rem] tracking-tight">
           <p>
             No 1, 1st Floor, Narasimhan St, Jothi Nagar, West Mambalam, Chennai,
             Tamil Nadu 600033
           </p>
-          <div className="flex items-center my-4 gap-x-6 justify-start pl-6 text-2xl">
+          <div className="flex items-center my-4 gap-x-6 justify-start pl-6 text-xl">
             <p className="relative">
               Privacy
               <span className="absolute -left-[0.05rem] right-0 bottom-[-2px] h-[1px] bg-black"></span>
@@ -31,7 +31,7 @@ function Page10() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-end h-[65vh] items-center gap-y-8 pb-12 w-6/12 text-3xl">
+      <div className="flex flex-col justify-end h-[65vh] items-center gap-y-8 pb-12 w-6/12 text-2xl">
         <div className="flex items-center justify-between w-full px-36">
           <div className="relative">
             Home

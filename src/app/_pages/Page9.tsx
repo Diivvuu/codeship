@@ -39,9 +39,9 @@ const Page9 = () => {
   return (
     <div className="w-full min-h-screen bg-[#FAFAFA] pt-12 px-36 relative">
       {/* <ParticleBackground /> */}
-      <div className="text-6xl font-semibold ">Have an innovative thought?</div>
+      <div className="text-5xl font-semibold ">Have an innovative thought?</div>
       <div className="w-full flex justify-center items-start my-8">
-        <div className="w-5/12 text-5xl font-medium">Tell us about it.</div>
+        <div className="w-5/12 text-4xl font-medium">Tell us about it.</div>
         <div className="w-7/12 flex flex-col justify-center items-start gap-y-12 pt-12 h-full">
           <div className="flex justify-center items-center w-full gap-x-20">
             <div className="flex flex-col items-start justify-center w-full gap-y-6">
@@ -85,7 +85,7 @@ const Page9 = () => {
       </div>
       <div className="flex justify-center items-center">
         <div className="w-5/12">
-          <div className="font-medium text-4xl">Follow us on :</div>
+          <div className="font-medium text-3xl">Follow us on :</div>
           <div className="flex items-center gap-x-5 mt-4">
             {iconsList.map((item, index) => {
               return <Image src={item.el} alt={item.name} />;
